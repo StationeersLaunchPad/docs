@@ -2,6 +2,8 @@
 
 ## Links
 
+- Unity Mod Template: [github.com/ilodev/stationeers.modding.template](https://github.com/ilodev/stationeers.modding.template)
+- BepInEx Mod Template: [github.com/StationeersModding/ExamplePatchMod](https://github.com/StationeersModding/ExamplePatchMod)
 - Steam Page: [Stationeers](https://store.steampowered.com/app/544550/Stationeers/)
 - Official Discord: [Stationeers Discord](https://discord.gg/stationeers)
 - Modding Discord: [Stationeers Modding](https://discord.gg/5qZbPVTw2U)

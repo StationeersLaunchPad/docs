@@ -1,17 +1,9 @@
-# Welcome to MkDocs
+# Home
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+## Links
 
-## Commands
-
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+- Steam Page: [Stationeers](https://store.steampowered.com/app/544550/Stationeers/)
+- Official Discord: [Stationeers Discord](https://discord.gg/stationeers)
+- Modding Discord: [Stationeers Modding](https://discord.gg/5qZbPVTw2U)
+- Mod Loader: [StationeersLaunchPad](https://github.com/StationeersLaunchPad/StationeersLaunchPad)
+- Docs Source [StationeersLaunchPad/docs](https://github.com/StationeersLaunchPad/docs)

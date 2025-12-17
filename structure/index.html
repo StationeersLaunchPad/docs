@@ -558,7 +558,7 @@
   <span class="md-ellipsis">
     
   
-    GameData
+    GameData Overview
   
 
     
@@ -595,6 +595,89 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GameData Elements
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    GameData Elements
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xml/GameData_Elements/recipedata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RecipeData
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -714,7 +797,7 @@
 <h1 id="mod-structure">Mod Structure</h1>
 <p>Mods can be developed locally by adding a folder to <code>%home%/Documents/my games/Stationeers/mods/</code> with files for the mod.</p>
 <h2 id="layout">Layout</h2>
-<pre><code>About/
+<div class="highlight"><pre><span></span><code>About/
   About.xml # This file is required for the game to recognize this as a mod
   Preview.png # Image shown in the in-game workshop menu
   thumb.png # Thumbnail image in steam workshop (must be &lt;1MB)
@@ -722,104 +805,104 @@ GameData/
   *.xml # game data xml files (recipes, traders, start conditions, etc.)
   Language/
     *.xml # localization xml files
-</code></pre>
+</code></pre></div>
 <h2 id="aboutxml-format">About.xml format</h2>
 <h3 id="builtin">Builtin</h3>
-<p>The game supports a small set of builtin fields:</p>
-<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
-&lt;ModMetadata&gt;
-  &lt;!-- Title in workshop and display name in-game --&gt;
-  &lt;Name&gt;My Mod&lt;/Name&gt;
-  &lt;!-- Author and Version are for in-game display only --&gt;
-  &lt;Author&gt;Me&lt;/Author&gt;
-  &lt;Version&gt;1.2.3&lt;/Version&gt;
-  &lt;!-- Description is shown in the workshop and in-game --&gt;
-  &lt;Description&gt;
-    [h1]My Mod[/h1]
-  &lt;/Description&gt;
-  &lt;!-- Steam workshop ID. Will be automatically added to xml file after upload --&gt;
-  &lt;WorkshopHandle&gt;12345678&lt;/WorkshopHandle&gt;
-  &lt;!-- Custom tags for workshop. The Mod tag will automatically be added --&gt;
-  &lt;Tags&gt;
-    &lt;Tag&gt;Special&lt;/Tag&gt;
-  &lt;/Tags&gt;
-&lt;/ModMetadata&gt;
-</code></pre>
-<p>Use <a href="https://steamcommunity.com/comment/Recommendation/formattinghelp">steam text formatting</a> in the <code>Description</code> field so it is formatted properly for the workshop.</p>
+<p>The game supports a small set of builtin fields:
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span class="nt">&lt;ModMetadata&gt;</span>
+<span class="w">  </span><span class="cm">&lt;!-- Title in workshop and display name in-game --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Name&gt;</span>My<span class="w"> </span>Mod<span class="nt">&lt;/Name&gt;</span>
+<span class="w">  </span><span class="cm">&lt;!-- Author and Version are for in-game display only --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Author&gt;</span>Me<span class="nt">&lt;/Author&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Version&gt;</span>1.2.3<span class="nt">&lt;/Version&gt;</span>
+<span class="w">  </span><span class="cm">&lt;!-- Description is shown in the workshop and in-game --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Description&gt;</span>
+<span class="w">    </span>[h1]My<span class="w"> </span>Mod[/h1]
+<span class="w">  </span><span class="nt">&lt;/Description&gt;</span>
+<span class="w">  </span><span class="cm">&lt;!-- Steam workshop ID. Will be automatically added to xml file after upload --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;WorkshopHandle&gt;</span>12345678<span class="nt">&lt;/WorkshopHandle&gt;</span>
+<span class="w">  </span><span class="cm">&lt;!-- Custom tags for workshop. The Mod tag will automatically be added --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Tags&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Tag&gt;</span>Special<span class="nt">&lt;/Tag&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/Tags&gt;</span>
+<span class="nt">&lt;/ModMetadata&gt;</span>
+</code></pre></div>
+Use <a href="https://steamcommunity.com/comment/Recommendation/formattinghelp">steam text formatting</a> in the <code>Description</code> field so it is formatted properly for the workshop.</p>
 <h3 id="stationeerslaunchpad">StationeersLaunchPad</h3>
-<p>When using <a href="https://github.com/StationeersLaunchPad/StationeersLaunchPad">StationeersLaunchPad</a>, an additional set of fields is supported:</p>
-<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
-&lt;ModMetadata&gt;
-  &lt;Name&gt;My Mod&lt;/Name&gt;
-  &lt;ModID&gt;my.mod&lt;/ModID&gt; &lt;!-- unique id to identify mod for dependencies --&gt;
-  &lt;Author&gt;Me&lt;/Author&gt;
-  &lt;Version&gt;1.2.3&lt;/Version&gt;
-  &lt;!-- Steam tags will automatically be converted to display proper formatting in game --&gt;
-  &lt;Description&gt;
-    [h1]My Mod[/h1]
-  &lt;/Description&gt;
-  &lt;!-- Text for the Change Notes tab on the workshop. Should be replaced completely for each version --&gt;
-  &lt;ChangeLog&gt;
-    [h3]Version 1.2.3[/h3]
-    [list]
-      [*]Fixed something
-      [*]Added something else
-    [/list]
-  &lt;/ChangeLog&gt;
-  &lt;WorkshopHandle&gt;12345678&lt;/WorkshopHandle&gt;
-  &lt;Tags&gt;&lt;Tag&gt;Special&lt;/Tag&gt;&lt;/Tags&gt;
-  &lt;!-- List dependencies of this mod. Can be referenced by ModID or WorkshopHandle --&gt;
-  &lt;DependsOn ModID=&quot;other.mod&quot; /&gt;
-  &lt;DependsOn WorkshopHandle=&quot;87654321&quot; /&gt;
-  &lt;!-- Ordering constraints are enforced if a matched mod is installed, but does not make them a dependency --&gt;
-  &lt;!-- Ensure this mod is loaded before other mods --&gt;
-  &lt;OrderBefore ModID=&quot;later.mod&quot; /&gt;
-  &lt;!-- Ensure this mod is loaded after other mods --&gt;
-  &lt;OrderAfter ModID=&quot;earlier.mod&quot; /&gt;
-&lt;/ModMetadata&gt;
-</code></pre>
+<p>When using <a href="https://github.com/StationeersLaunchPad/StationeersLaunchPad">StationeersLaunchPad</a>, an additional set of fields is supported:
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span class="nt">&lt;ModMetadata&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Name&gt;</span>My<span class="w"> </span>Mod<span class="nt">&lt;/Name&gt;</span>
+<span class="w">  </span><span class="nt">&lt;ModID&gt;</span>my.mod<span class="nt">&lt;/ModID&gt;</span><span class="w"> </span><span class="cm">&lt;!-- unique id to identify mod for dependencies --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Author&gt;</span>Me<span class="nt">&lt;/Author&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Version&gt;</span>1.2.3<span class="nt">&lt;/Version&gt;</span>
+<span class="w">  </span><span class="cm">&lt;!-- Steam tags will automatically be converted to display proper formatting in game --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Description&gt;</span>
+<span class="w">    </span>[h1]My<span class="w"> </span>Mod[/h1]
+<span class="w">  </span><span class="nt">&lt;/Description&gt;</span>
+<span class="w">  </span><span class="cm">&lt;!-- Text for the Change Notes tab on the workshop. Should be replaced completely for each version --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;ChangeLog&gt;</span>
+<span class="w">    </span>[h3]Version<span class="w"> </span>1.2.3[/h3]
+<span class="w">    </span>[list]
+<span class="w">      </span>[*]Fixed<span class="w"> </span>something
+<span class="w">      </span>[*]Added<span class="w"> </span>something<span class="w"> </span>else
+<span class="w">    </span>[/list]
+<span class="w">  </span><span class="nt">&lt;/ChangeLog&gt;</span>
+<span class="w">  </span><span class="nt">&lt;WorkshopHandle&gt;</span>12345678<span class="nt">&lt;/WorkshopHandle&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Tags&gt;&lt;Tag&gt;</span>Special<span class="nt">&lt;/Tag&gt;&lt;/Tags&gt;</span>
+<span class="w">  </span><span class="cm">&lt;!-- List dependencies of this mod. Can be referenced by ModID or WorkshopHandle --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;DependsOn</span><span class="w"> </span><span class="na">ModID=</span><span class="s">&quot;other.mod&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;DependsOn</span><span class="w"> </span><span class="na">WorkshopHandle=</span><span class="s">&quot;87654321&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="cm">&lt;!-- Ordering constraints are enforced if a matched mod is installed, but does not make them a dependency --&gt;</span>
+<span class="w">  </span><span class="cm">&lt;!-- Ensure this mod is loaded before other mods --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;OrderBefore</span><span class="w"> </span><span class="na">ModID=</span><span class="s">&quot;later.mod&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="cm">&lt;!-- Ensure this mod is loaded after other mods --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;OrderAfter</span><span class="w"> </span><span class="na">ModID=</span><span class="s">&quot;earlier.mod&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/ModMetadata&gt;</span>
+</code></pre></div></p>
 <h3 id="deprecated-stationeersmods">Deprecated StationeersMods</h3>
-<p>There is also a set of deprecated fields that are still supported by StationersLaunchPad. The newer format is encouraged for readability.</p>
-<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
-&lt;ModMetadata&gt;
-  &lt;Name&gt;My Mod&lt;/Name&gt;
-  &lt;Author&gt;Me&lt;/Author&gt;
-  &lt;Version&gt;1.2.3&lt;/Version&gt;
-  &lt;Description&gt;
-    [h1]My Mod[/h1]
-  &lt;/Description&gt;
-  &lt;!-- Separate description displayed in-game on workshop menu using TextMeshPro formatting tags --&gt;
-  &lt;!-- If not present, Description field will be parsed and converted from steam to TMP format --&gt;
-  &lt;InGameDescription&gt;
-    &lt;![CDATA[
-      &lt;size=&quot;30&quot;&gt;My Mod&lt;/color&gt;
-      &lt;/size&gt;
-    ]]&gt;
-  &lt;/InGameDescription&gt;
-  &lt;ChangeLog&gt;
-    [h3]Version 1.2.3[/h3]
-  &lt;/ChangeLog&gt;
-  &lt;WorkshopHandle&gt;12345678&lt;/WorkshopHandle&gt;
-  &lt;Tags&gt;&lt;Tag&gt;Special&lt;/Tag&gt;&lt;/Tags&gt;
-  &lt;!-- Dependencies of this mod --&gt;
-  &lt;Dependencies&gt;
-    &lt;Mod&gt;
-      &lt;!-- workshop handle of dependency --&gt;
-      &lt;Id&gt;87654321&lt;/Id&gt;
-    &lt;/Mod&gt;
-  &lt;/Dependencies&gt;
-  &lt;!-- Mods to load *After* this mod --&gt;
-  &lt;!-- Equivalent to OrderBefore --&gt;
-  &lt;LoadAfter&gt;
-    &lt;Mod&gt;&lt;Id&gt;76543218&lt;/Id&gt;&lt;/Mod&gt;
-  &lt;/LoadAfter&gt;
-  &lt;!-- Mods to load *Before* this mod --&gt;
-  &lt;!-- Equivalent to OrderAfter --&gt;
-  &lt;LoadBefore&gt;
-    &lt;Mod&gt;&lt;Id&gt;65432187&lt;/Id&gt;&lt;/Mod&gt;
-  &lt;/LoadBefore&gt;
-&lt;/ModMetadata&gt;
-</code></pre>
+<p>There is also a set of deprecated fields that are still supported by StationersLaunchPad. The newer format is encouraged for readability.
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span class="nt">&lt;ModMetadata&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Name&gt;</span>My<span class="w"> </span>Mod<span class="nt">&lt;/Name&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Author&gt;</span>Me<span class="nt">&lt;/Author&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Version&gt;</span>1.2.3<span class="nt">&lt;/Version&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Description&gt;</span>
+<span class="w">    </span>[h1]My<span class="w"> </span>Mod[/h1]
+<span class="w">  </span><span class="nt">&lt;/Description&gt;</span>
+<span class="w">  </span><span class="cm">&lt;!-- Separate description displayed in-game on workshop menu using TextMeshPro formatting tags --&gt;</span>
+<span class="w">  </span><span class="cm">&lt;!-- If not present, Description field will be parsed and converted from steam to TMP format --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;InGameDescription&gt;</span>
+<span class="w">    </span><span class="cp">&lt;![CDATA[</span>
+<span class="cp">      &lt;size=&quot;30&quot;&gt;My Mod&lt;/color&gt;</span>
+<span class="cp">      &lt;/size&gt;</span>
+<span class="cp">    ]]&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/InGameDescription&gt;</span>
+<span class="w">  </span><span class="nt">&lt;ChangeLog&gt;</span>
+<span class="w">    </span>[h3]Version<span class="w"> </span>1.2.3[/h3]
+<span class="w">  </span><span class="nt">&lt;/ChangeLog&gt;</span>
+<span class="w">  </span><span class="nt">&lt;WorkshopHandle&gt;</span>12345678<span class="nt">&lt;/WorkshopHandle&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Tags&gt;&lt;Tag&gt;</span>Special<span class="nt">&lt;/Tag&gt;&lt;/Tags&gt;</span>
+<span class="w">  </span><span class="cm">&lt;!-- Dependencies of this mod --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Dependencies&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Mod&gt;</span>
+<span class="w">      </span><span class="cm">&lt;!-- workshop handle of dependency --&gt;</span>
+<span class="w">      </span><span class="nt">&lt;Id&gt;</span>87654321<span class="nt">&lt;/Id&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/Mod&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/Dependencies&gt;</span>
+<span class="w">  </span><span class="cm">&lt;!-- Mods to load *After* this mod --&gt;</span>
+<span class="w">  </span><span class="cm">&lt;!-- Equivalent to OrderBefore --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;LoadAfter&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Mod&gt;&lt;Id&gt;</span>76543218<span class="nt">&lt;/Id&gt;&lt;/Mod&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/LoadAfter&gt;</span>
+<span class="w">  </span><span class="cm">&lt;!-- Mods to load *Before* this mod --&gt;</span>
+<span class="w">  </span><span class="cm">&lt;!-- Equivalent to OrderAfter --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;LoadBefore&gt;</span>
+<span class="w">    </span><span class="nt">&lt;Mod&gt;&lt;Id&gt;</span>65432187<span class="nt">&lt;/Id&gt;&lt;/Mod&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/LoadBefore&gt;</span>
+<span class="nt">&lt;/ModMetadata&gt;</span>
+</code></pre></div></p>
 
 
 

@@ -23,7 +23,7 @@
     
     
       
-        <title>GameData - Stationeers Modding</title>
+        <title>GameData Overview - Stationeers Modding</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#gamedata" class="md-skip">
+        <a href="#gamedata-overview" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              GameData
+              GameData Overview
             
           </span>
         </div>
@@ -454,6 +454,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GameData Overview
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -461,7 +479,7 @@
   <span class="md-ellipsis">
     
   
-    GameData
+    GameData Overview
   
 
     
@@ -470,6 +488,47 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#recipes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recipes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#all-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        All Elements
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -504,6 +563,89 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GameData Elements
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    GameData Elements
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GameData_Elements/recipedata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RecipeData
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -531,6 +673,36 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#recipes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recipes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#all-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        All Elements
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -546,12 +718,98 @@
 
 
 
-<h1 id="gamedata">GameData</h1>
-<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
-&lt;GameData&gt;
-  &lt;!-- TODO --&gt;
-&lt;/GameData&gt;
-</code></pre>
+<h1 id="gamedata-overview">GameData Overview</h1>
+<p>GameData xml files contain configurations for the various systems of the game. You can find the vanilla GameData files in the game install under <code>rocketstation_Data/StreamingAssets/Data</code> and <code>rocketstation_Data/StreamingAssets/Worlds</code>. These files will always be loaded first, followed by the files in enabled mods.</p>
+<p>In a mod, these files can be anywhere inside the <code>GameData</code> folder except in a folder named <code>Language</code>. The name of the file doesn't matter as long as it has the xml extension. Each file should contain one top-level <code>GameData</code> element with any configuration elements inside.</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span class="nt">&lt;GameData&gt;</span>
+<span class="w">  </span><span class="cm">&lt;!-- custom configurations here --&gt;</span>
+<span class="nt">&lt;/GameData&gt;</span>
+</code></pre></div>
+<h2 id="recipes">Recipes</h2>
+<p>Most devices that consume and produce items (printers, furnaces, centrifuge, etc), follow recipes defined in xml. These recipes can be replaced by mods by defining a recipe for the same item.</p>
+<p>Children: <a href="../GameData_Elements/recipedata/">RecipeData</a></p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span class="nt">&lt;GameData&gt;</span>
+<span class="w">  </span><span class="nt">&lt;CentrifugeRecipes&gt;</span><span class="cm">&lt;!-- &lt;RecipeData&gt; --&gt;</span><span class="nt">&lt;/CentrifugeRecipes&gt;</span>
+<span class="w">  </span><span class="nt">&lt;FurnaceRecipes&gt;</span><span class="cm">&lt;!-- &lt;RecipeData&gt; --&gt;</span><span class="nt">&lt;/FurnaceRecipes&gt;</span>
+<span class="w">  </span><span class="nt">&lt;AdvancedFurnaceRecipes&gt;</span><span class="cm">&lt;!-- &lt;RecipeData&gt; --&gt;</span><span class="nt">&lt;/AdvancedFurnaceRecipes&gt;</span>
+<span class="w">  </span><span class="nt">&lt;ArcFurnaceRecipes&gt;</span><span class="cm">&lt;!-- &lt;RecipeData&gt; --&gt;</span><span class="nt">&lt;/ArcFurnaceRecipes&gt;</span>
+<span class="w">  </span><span class="nt">&lt;MicrowaveRecipes&gt;</span><span class="cm">&lt;!-- &lt;RecipeData&gt; --&gt;</span><span class="nt">&lt;/MicrowaveRecipes&gt;</span>
+<span class="w">  </span><span class="nt">&lt;PackagingMachineRecipes&gt;</span><span class="cm">&lt;!-- &lt;RecipeData&gt; --&gt;</span><span class="nt">&lt;/PackagingMachineRecipes&gt;</span>
+<span class="w">  </span><span class="nt">&lt;AutolatheRecipes&gt;</span><span class="cm">&lt;!-- &lt;RecipeData&gt; --&gt;</span><span class="nt">&lt;/AutolatheRecipes&gt;</span>
+<span class="w">  </span><span class="nt">&lt;AutomatedOvenRecipes&gt;</span><span class="cm">&lt;!-- &lt;RecipeData&gt; --&gt;</span><span class="nt">&lt;/AutomatedOvenRecipes&gt;</span>
+<span class="w">  </span><span class="nt">&lt;ElectronicsPrinterRecipes&gt;</span><span class="cm">&lt;!-- &lt;RecipeData&gt; --&gt;</span><span class="nt">&lt;/ElectronicsPrinterRecipes&gt;</span>
+<span class="w">  </span><span class="nt">&lt;SecurityPrinterRecipes&gt;</span><span class="cm">&lt;!-- &lt;RecipeData&gt; --&gt;</span><span class="nt">&lt;/SecurityPrinterRecipes&gt;</span>
+<span class="w">  </span><span class="nt">&lt;RocketManufactoryRecipes&gt;</span><span class="cm">&lt;!-- &lt;RecipeData&gt; --&gt;</span><span class="nt">&lt;/RocketManufactoryRecipes&gt;</span>
+<span class="w">  </span><span class="nt">&lt;HydraulicPipeBenderRecipes&gt;</span><span class="cm">&lt;!-- &lt;RecipeData&gt; --&gt;</span><span class="nt">&lt;/HydraulicPipeBenderRecipes&gt;</span>
+<span class="w">  </span><span class="nt">&lt;ToolManufactoryRecipes&gt;</span><span class="cm">&lt;!-- &lt;RecipeData&gt; --&gt;</span><span class="nt">&lt;/ToolManufactoryRecipes&gt;</span>
+<span class="w">  </span><span class="nt">&lt;ChemistryRecipes&gt;</span><span class="cm">&lt;!-- &lt;RecipeData&gt; --&gt;</span><span class="nt">&lt;/ChemistryRecipes&gt;</span>
+<span class="w">  </span><span class="nt">&lt;IngotRecipes&gt;</span><span class="cm">&lt;!-- &lt;RecipeData&gt; --&gt;</span><span class="nt">&lt;/IngotRecipes&gt;</span>
+<span class="w">  </span><span class="nt">&lt;RecycleRecipes&gt;</span><span class="cm">&lt;!-- &lt;RecipeData&gt; --&gt;</span><span class="nt">&lt;/RecycleRecipes&gt;</span>
+<span class="w">  </span><span class="nt">&lt;TerraformingManufactoryRecipes&gt;</span><span class="cm">&lt;!-- &lt;RecipeData&gt; --&gt;</span><span class="nt">&lt;/TerraformingManufactoryRecipes&gt;</span>
+<span class="nt">&lt;/GameData&gt;</span>
+</code></pre></div>
+<h2 id="all-elements">All Elements</h2>
+<details class="example">
+<summary>Show</summary>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span class="nt">&lt;GameData&gt;</span>
+<span class="w">  </span><span class="nt">&lt;CentrifugeRecipes&gt;</span><span class="cm">&lt;!-- &lt;RecipeData&gt; --&gt;</span><span class="nt">&lt;/CentrifugeRecipes&gt;</span>
+<span class="w">  </span><span class="nt">&lt;FurnaceRecipes&gt;</span><span class="cm">&lt;!-- &lt;RecipeData&gt; --&gt;</span><span class="nt">&lt;/FurnaceRecipes&gt;</span>
+<span class="w">  </span><span class="nt">&lt;AdvancedFurnaceRecipes&gt;</span><span class="cm">&lt;!-- &lt;RecipeData&gt; --&gt;</span><span class="nt">&lt;/AdvancedFurnaceRecipes&gt;</span>
+<span class="w">  </span><span class="nt">&lt;ArcFurnaceRecipes&gt;</span><span class="cm">&lt;!-- &lt;RecipeData&gt; --&gt;</span><span class="nt">&lt;/ArcFurnaceRecipes&gt;</span>
+<span class="w">  </span><span class="nt">&lt;MicrowaveRecipes&gt;</span><span class="cm">&lt;!-- &lt;RecipeData&gt; --&gt;</span><span class="nt">&lt;/MicrowaveRecipes&gt;</span>
+<span class="w">  </span><span class="nt">&lt;PackagingMachineRecipes&gt;</span><span class="cm">&lt;!-- &lt;RecipeData&gt; --&gt;</span><span class="nt">&lt;/PackagingMachineRecipes&gt;</span>
+<span class="w">  </span><span class="nt">&lt;AutolatheRecipes&gt;</span><span class="cm">&lt;!-- &lt;RecipeData&gt; --&gt;</span><span class="nt">&lt;/AutolatheRecipes&gt;</span>
+<span class="w">  </span><span class="nt">&lt;AutomatedOvenRecipes&gt;</span><span class="cm">&lt;!-- &lt;RecipeData&gt; --&gt;</span><span class="nt">&lt;/AutomatedOvenRecipes&gt;</span>
+<span class="w">  </span><span class="nt">&lt;ElectronicsPrinterRecipes&gt;</span><span class="cm">&lt;!-- &lt;RecipeData&gt; --&gt;</span><span class="nt">&lt;/ElectronicsPrinterRecipes&gt;</span>
+<span class="w">  </span><span class="nt">&lt;SecurityPrinterRecipes&gt;</span><span class="cm">&lt;!-- &lt;RecipeData&gt; --&gt;</span><span class="nt">&lt;/SecurityPrinterRecipes&gt;</span>
+<span class="w">  </span><span class="nt">&lt;RocketManufactoryRecipes&gt;</span><span class="cm">&lt;!-- &lt;RecipeData&gt; --&gt;</span><span class="nt">&lt;/RocketManufactoryRecipes&gt;</span>
+<span class="w">  </span><span class="nt">&lt;HydraulicPipeBenderRecipes&gt;</span><span class="cm">&lt;!-- &lt;RecipeData&gt; --&gt;</span><span class="nt">&lt;/HydraulicPipeBenderRecipes&gt;</span>
+<span class="w">  </span><span class="nt">&lt;ToolManufactoryRecipes&gt;</span><span class="cm">&lt;!-- &lt;RecipeData&gt; --&gt;</span><span class="nt">&lt;/ToolManufactoryRecipes&gt;</span>
+<span class="w">  </span><span class="nt">&lt;ChemistryRecipes&gt;</span><span class="cm">&lt;!-- &lt;RecipeData&gt; --&gt;</span><span class="nt">&lt;/ChemistryRecipes&gt;</span>
+<span class="w">  </span><span class="nt">&lt;IngotRecipes&gt;</span><span class="cm">&lt;!-- &lt;RecipeData&gt; --&gt;</span><span class="nt">&lt;/IngotRecipes&gt;</span>
+<span class="w">  </span><span class="nt">&lt;RecycleRecipes&gt;</span><span class="cm">&lt;!-- &lt;RecipeData&gt; --&gt;</span><span class="nt">&lt;/RecycleRecipes&gt;</span>
+<span class="w">  </span><span class="nt">&lt;TerraformingManufactoryRecipes&gt;</span><span class="cm">&lt;!-- &lt;RecipeData&gt; --&gt;</span><span class="nt">&lt;/TerraformingManufactoryRecipes&gt;</span>
+<span class="w">  </span><span class="nt">&lt;MinableVisualiser&gt;</span><span class="cm">&lt;!-- MinableVisualiserData --&gt;</span><span class="nt">&lt;/MinableVisualiser&gt;</span>
+<span class="w">  </span><span class="nt">&lt;ReagentGrinderRecipes&gt;</span><span class="cm">&lt;!-- &lt;ProcessingData&gt; --&gt;</span><span class="nt">&lt;/ReagentGrinderRecipes&gt;</span>
+<span class="w">  </span><span class="nt">&lt;WorldSettings&gt;</span><span class="cm">&lt;!-- &lt;World&gt; WorldSettingData --&gt;</span><span class="nt">&lt;/WorldSettings&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Trader&gt;</span><span class="cm">&lt;!-- TraderData --&gt;</span><span class="nt">&lt;/Trader&gt;</span>
+<span class="w">  </span><span class="nt">&lt;RoomTypeRule&gt;</span><span class="cm">&lt;!-- RoomTypeRuleData --&gt;</span><span class="nt">&lt;/RoomTypeRule&gt;</span>
+<span class="w">  </span><span class="nt">&lt;ContactSlot&gt;</span><span class="cm">&lt;!-- ContactSlotData --&gt;</span><span class="nt">&lt;/ContactSlot&gt;</span>
+<span class="w">  </span><span class="nt">&lt;SpaceMap&gt;</span><span class="cm">&lt;!-- SpaceMapData --&gt;</span><span class="nt">&lt;/SpaceMap&gt;</span>
+<span class="w">  </span><span class="nt">&lt;CelestialBodies&gt;</span><span class="cm">&lt;!-- &lt;CelestialBody&gt; CelestialBodyTemplate --&gt;</span><span class="nt">&lt;/CelestialBodies&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Icon&gt;</span><span class="cm">&lt;!-- NodeIcon --&gt;</span><span class="nt">&lt;/Icon&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Spawn&gt;</span><span class="cm">&lt;!-- SpawnData --&gt;</span><span class="nt">&lt;/Spawn&gt;</span>
+<span class="w">  </span><span class="nt">&lt;StartCondition&gt;</span><span class="cm">&lt;!-- StartConditionData --&gt;</span><span class="nt">&lt;/StartCondition&gt;</span>
+<span class="w">  </span><span class="nt">&lt;StartLocation&gt;</span><span class="cm">&lt;!-- StartLocationData --&gt;</span><span class="nt">&lt;/StartLocation&gt;</span>
+<span class="w">  </span><span class="nt">&lt;RandomStartLocation&gt;</span><span class="cm">&lt;!-- RoundRobitStartLocationData --&gt;</span><span class="nt">&lt;/RandomStartLocation&gt;</span>
+<span class="w">  </span><span class="nt">&lt;WorldObjective&gt;</span><span class="cm">&lt;!-- WorldObjectiveCollection --&gt;</span><span class="nt">&lt;/WorldObjective&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Objective&gt;</span><span class="cm">&lt;!-- WorldObjective --&gt;</span><span class="nt">&lt;/Objective&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Buy&gt;</span><span class="cm">&lt;!-- BuyData --&gt;</span><span class="nt">&lt;/Buy&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Sell&gt;</span><span class="cm">&lt;!-- SellData --&gt;</span><span class="nt">&lt;/Sell&gt;</span>
+<span class="w">  </span><span class="nt">&lt;PaintMixRecipes&gt;</span><span class="cm">&lt;!-- &lt;RecipeData&gt; --&gt;</span><span class="nt">&lt;/PaintMixRecipes&gt;</span>
+<span class="w">  </span><span class="nt">&lt;ThingMods&gt;</span><span class="cm">&lt;!-- &lt;ThingModData&gt; --&gt;</span><span class="nt">&lt;/ThingMods&gt;</span>
+<span class="w">  </span><span class="nt">&lt;ReagentTradeValues&gt;</span><span class="cm">&lt;!-- &lt;ReagentTradeData&gt; --&gt;</span><span class="nt">&lt;/ReagentTradeValues&gt;</span>
+<span class="w">  </span><span class="nt">&lt;GasMoleTradeValues&gt;</span><span class="cm">&lt;!-- &lt;GasTradeData&gt; --&gt;</span><span class="nt">&lt;/GasMoleTradeValues&gt;</span>
+<span class="w">  </span><span class="nt">&lt;DifficultySettings&gt;</span><span class="cm">&lt;!-- &lt;DifficultySetting&gt; --&gt;</span><span class="nt">&lt;/DifficultySettings&gt;</span>
+<span class="w">  </span><span class="nt">&lt;DefaultRocketNames&gt;</span><span class="cm">&lt;!-- &lt;RocketName&gt; --&gt;</span><span class="nt">&lt;/DefaultRocketNames&gt;</span>
+<span class="w">  </span><span class="nt">&lt;GHGIndex&gt;</span><span class="cm">&lt;!-- TerraformingGasCurveData --&gt;</span><span class="nt">&lt;/GHGIndex&gt;</span>
+<span class="w">  </span><span class="nt">&lt;AtmosphericScatteringBlend&gt;</span><span class="cm">&lt;!-- AtmosphericScatteringBlendData --&gt;</span><span class="nt">&lt;/AtmosphericScatteringBlend&gt;</span>
+<span class="w">  </span><span class="nt">&lt;LifeRequirements&gt;</span><span class="cm">&lt;!-- LifeRequirementsData --&gt;</span><span class="nt">&lt;/LifeRequirements&gt;</span>
+<span class="w">  </span><span class="nt">&lt;CustomPlant&gt;</span><span class="cm">&lt;!-- CustomPlantData --&gt;</span><span class="nt">&lt;/CustomPlant&gt;</span>
+<span class="w">  </span><span class="nt">&lt;CustomSeed&gt;</span><span class="cm">&lt;!-- CustomSeedData --&gt;</span><span class="nt">&lt;/CustomSeed&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Blueprint&gt;</span><span class="cm">&lt;!-- BlueprintData --&gt;</span><span class="nt">&lt;/Blueprint&gt;</span>
+<span class="w">  </span><span class="nt">&lt;WeatherEvent&gt;</span><span class="cm">&lt;!-- WeatherEvent --&gt;</span><span class="nt">&lt;/WeatherEvent&gt;</span>
+<span class="w">  </span><span class="nt">&lt;ServerProviderData&gt;</span><span class="cm">&lt;!-- ServerProvider --&gt;</span><span class="nt">&lt;/ServerProviderData&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Minables&gt;</span><span class="cm">&lt;!-- MinablesGenerationData --&gt;</span><span class="nt">&lt;/Minables&gt;</span>
+<span class="w">  </span><span class="nt">&lt;DeepMinables&gt;</span><span class="cm">&lt;!-- DeepMinablesGenerationData --&gt;</span><span class="nt">&lt;/DeepMinables&gt;</span>
+<span class="w">  </span><span class="nt">&lt;OreVein&gt;</span><span class="cm">&lt;!-- VeinGenerationData --&gt;</span><span class="nt">&lt;/OreVein&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Expression&gt;</span><span class="cm">&lt;!-- FacialExpressionData --&gt;</span><span class="nt">&lt;/Expression&gt;</span>
+<span class="nt">&lt;/GameData&gt;</span>
+</code></pre></div>
+</details>
 
 
 

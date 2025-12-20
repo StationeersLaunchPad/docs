@@ -23,6 +23,7 @@ plugins:
 markdown_extensions:
   - admonition
   - def_list
+  - attr_list
   - pymdownx.details
   - pymdownx.superfences
   - pymdownx.tabbed:

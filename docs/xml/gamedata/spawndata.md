@@ -1,16 +1,15 @@
 # SpawnData
-Description
+`<Spawn>` elements define a set of spawn actions for creating a set of starting equipment or items, as well as creating prebuilt structures and room atmospheres for tutorials.
 
-??? example "Structure"
+??? example "XML Structure"
     ```xml
     <Spawn
-        Id="CustomSpawn1"
-        Event="NewWorld"
-        HideInStartScreen="false"
-        ShowInSpawnMenu="true"
-        StartScreenHeader="HeaderKey">
-      <Name Key="SpawnLocalizationKey" />
-      <!-- conditions -->
+        Id="string"
+        Event="string"
+        HideInStartScreen="boolean"
+        ShowInSpawnMenu="boolean"
+        StartScreenHeader="string">
+      <Name Key="string" />
       <Species><!-- SpeciesCondition --></Species>
       <Difficulty><!-- DifficultyCondition --></Difficulty>
       <SurvivalProperty><!-- SurvivalPropertyAction --></SurvivalProperty>
@@ -22,10 +21,9 @@ Description
     </Spawn>
     ```
 
-## Examples
+### Examples
 
 === "Crate"
-    
     ```xml title="Spawn a green crate with basic hydroponics setup"
     <Spawn Id="PotatoSupplies">
       <DynamicThing Id="DynamicCrate">
@@ -74,7 +72,7 @@ Description
     </Spawn>
     ```
 
-## Valid Check
+### Valid Check
 
 In order to be considered valid, a `SpawnData` must have at least one of the following children:
 
@@ -86,12 +84,12 @@ In order to be considered valid, a `SpawnData` must have at least one of the fol
 
 When not valid, this is instead a reference spawn and the `Id` attribute is used to look up `SpawnData` defined elsewhere to execute. Reference spawns can still specify all attributes to configure its display in the New World menu and which `Event` it executes on, as well as `<Species>` and `<Difficulty>` conditions to further filter its execution.
 
-## Attributes
+### Attributes
 
-`Id` (optional)
+#### `Id`
 :   When valid, registers this `SpawnData` globally for others to reference. Otherwise, specifies what `SpawnData` to lookup and execute here.
 
-`Event` (optional)
+#### `Event`
 :   When this `SpawnData` is a top-level child of a `StartConditionData` or `WorldSettingData`, specifies when this spawn should be executed. Otherwise this attribute is ignored.
 
     Possible Values
@@ -103,33 +101,41 @@ When not valid, this is instead a reference spawn and the `Id` attribute is used
     - `NewPlayer`: Executed once for each player when first joining the world. Spawns items loose in the world near the player
     - `RespawnPlayer`: Executed once for each player when respawning. Spawns items loose in the world near the player
 
-`HideInStartScreen` (optional)
+#### `HideInStartScreen`
 :   When `true`, this `SpawnData` will not be displayed in the starting items on the New World menu
 
-`ShowInSpawnMenu` (optional)
+#### `ShowInSpawnMenu`
 :   When `true`, this `SpawnData` will be available in the creative spawn menu
 
-`StartScreenHeader` (optional)
+#### `StartScreenHeader`
 :   The localization key of the subtitle text for this spawn in the New World menu
 
-## Child Elements
+### Child Elements
 
-`<Name Key="NameKey">` `LocalizedStringReference` (optional)
+#### Name
+`<Name Key="NameKey">` `LocalizedStringReference`
 :   Localization key for the name of this `SpawnData`. Currently only used as the display name in the creative spawn menu
 
-`<Species>` `SpeciesCondition` `<Difficulty>` `DifficultyCondition` (optional, repeated)
-:   `SpeciesCondition` and `DifficultyCondition` elements that restrict when this spawn will occur. See [ConditionData (TODO)](#)
+#### Conditions
+`<Species>` `SpeciesCondition`
+`<Difficulty>` `DifficultyCondition`
+:   Condition elements that restrict when this spawn will occur. See [ConditionData (TODO)](#)
 
-`<SurvivalProperty>` `SurvivalPropertyAction` (optional, repeated)
+#### Survival Property
+`<SurvivalProperty>` `SurvivalPropertyAction`
 :   Sets a survival property (hydration, mood, etc) of the player or spawned entity. See [ActionData (TODO)](#)
 
-`<Item>` / `<DynamicThing>` `DynamicSpawnData` (optional, repeated)
-:   Items to spawn as part of this `SpawnData`. See [ThingSpawnData (TODO)](#)
+#### Item Spawn
+`<Item>` `DynamicSpawnData`
+`<DynamicThing>` `DynamicSpawnData`
+:   Items to spawn as part of this `SpawnData`. See [DynamicSpawnData](thingspawndata.md#dynamicspawndata)
 
-`<Structure>` (optional, repeated)
-:   Structures to spawn as part of this `SpawnData`. Primarily used for prebuilt structures in tutorials. See [ThingSpawnData (TODO)](#)
+#### Structure Spawn
+`<Structure>` `StructureSpawnData`
+:   Structures to spawn as part of this `SpawnData`. Primarily used for prebuilt structures in tutorials. See [StructureSpawnData](thingspawndata.md#structurespawndata)
 
-`<WorldAtmosphere>` (optional, repeated)
+#### Atmosphere
+`<WorldAtmosphere>` `WorldAtmosphereSpawnData`
 :   Atmospheres to spawn as part of this `SpawnData`. Primarily used to fill rooms with specific gasses in tutorials.
 
     ??? example "Structure"
@@ -148,11 +154,12 @@ When not valid, this is instead a reference spawn and the `Id` attribute is used
     `<Gas>` `GasAction` (repeated)
     :   A gas to spawn in this atmosphere. See [ActionData (TODO)](#)
 
-`<Spawn>` (optional, repeated)
+#### Child Spawns
+`<Spawn>` `SpawnData`
 
 :   Child spawn elements to be executed as part of this `SpawnData`. These can be fully defined spawns that will be registered globally by their `Id` (if present), or references to spawns defined elsewhere.
 
-## Parent Elements
+### Parent Elements
 
 === "Top-Level Definition"
     ```xml title="Define a spawn to be referenced by Id"

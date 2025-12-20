@@ -1,7 +1,7 @@
 # RecipeData
 `<RecipeData>` elements define the recipe used to create an item, or for Centrifuge and Recyler what to produce when destroying an item.
 
-??? example "Structure"
+??? example "XML Structure"
     ```xml
     <RecipeData>
       <PrefabName>ItemGasCanisterEmpty</PrefabName>
@@ -99,12 +99,13 @@
 
 ## Child Elements
 
-`<PrefabName>` (required)
+### Prefab Name
+`<PrefabName>`
 
 :   Which item to produce or consume for this recipe. This matches the `Thing.PrefabName` field, or the `Prefab Name` in Stationpedia.
 
+### Recipe Tier
 `<RecipeTier>` (optional)
-
 :   The minimum machine tier needed for this recipe. Only used for printers.
 
     Possible Values
@@ -114,12 +115,12 @@
     - `TierTwo`: Upgraded tier. Requires `Printer Mod` applied to a basic printer
     - `TierThree`: Unused. Will not allow the recipe to be printed by any vanilla printer
 
+### Output Multiplier
 `<Output>` (optional)
-
 :   The multiplier applied to the output amount, default 1. Only used for furnaces. The final result amount is the sum of the reagents multiplied by the `Output` value. This is set to 0.25 for the vanilla superalloys.
 
-`<Recipe>` (required)
-
+### Recipe Reagents
+`<Recipe>`
 :   What reagents to consume or produce for the recipe.
 
     ??? example "Reagents"
@@ -175,12 +176,12 @@
         </Recipe>
         ```
 
+    #### Production Time
     `<Time>`
-
     :   How long in seconds the recipe takes. Used for printers, arc furnace, chemistry station, microwave, packaging machine.
 
+    #### Energy Cost
     `<Energy>`
-
     :   How much energy in Joules is needed for this recipe. Used for printers, arc furnace, furnaces.
 
         For printers, this defines the total energy needed for the recipe in addition to the base energy requirement of the printer. This energy consumption will be spread out over the duration of the print.
@@ -189,20 +190,20 @@
 
         For furnaces, this defines the energy removed from the furnace atmosphere per unit of produced ingot.
 
+    #### Temperature Requirement
     `<Temperature>`
-
     :   The range of temperatures in Kelvin that can produce this recipe. Used for furnace and arc furnace.
 
         For arc furnace recipes, this range must contain `5273.15` for the recipe to be valid.
 
+    #### Pressure Requirement
     `<Pressure>`
-
     :   The range of pressures in kPa that can produce this recipe. Used for furnace and and arc furnace.
 
         For arc furnace recipes, this range must contain `101.325` for the recipe to be valid.
 
+    #### Gas Requirement
     `<RequiredMix>`
-
     :   The required number of moles of each gas to be consumed per unit of this recipe. Used for furnace only.
 
         The `Rule` child element defines the requirements of a valid gas mixture.
@@ -236,26 +237,25 @@
 
 ## Parent Elements
 `RecipeData` elements are children of most top-level `Recipes` elements.
-??? example "Full Parent List"
-    ```xml
-    <?xml version="1.0" encoding="utf-8"?>
-    <GameData>
-      <CentrifugeRecipes><!-- <RecipeData> --></CentrifugeRecipes>
-      <FurnaceRecipes><!-- <RecipeData> --></FurnaceRecipes>
-      <AdvancedFurnaceRecipes><!-- <RecipeData> --></AdvancedFurnaceRecipes>
-      <ArcFurnaceRecipes><!-- <RecipeData> --></ArcFurnaceRecipes>
-      <MicrowaveRecipes><!-- <RecipeData> --></MicrowaveRecipes>
-      <PackagingMachineRecipes><!-- <RecipeData> --></PackagingMachineRecipes>
-      <AutolatheRecipes><!-- <RecipeData> --></AutolatheRecipes>
-      <AutomatedOvenRecipes><!-- <RecipeData> --></AutomatedOvenRecipes>
-      <ElectronicsPrinterRecipes><!-- <RecipeData> --></ElectronicsPrinterRecipes>
-      <SecurityPrinterRecipes><!-- <RecipeData> --></SecurityPrinterRecipes>
-      <RocketManufactoryRecipes><!-- <RecipeData> --></RocketManufactoryRecipes>
-      <HydraulicPipeBenderRecipes><!-- <RecipeData> --></HydraulicPipeBenderRecipes>
-      <ToolManufactoryRecipes><!-- <RecipeData> --></ToolManufactoryRecipes>
-      <ChemistryRecipes><!-- <RecipeData> --></ChemistryRecipes>
-      <IngotRecipes><!-- <RecipeData> --></IngotRecipes>
-      <RecycleRecipes><!-- <RecipeData> --></RecycleRecipes>
-      <TerraformingManufactoryRecipes><!-- <RecipeData> --></TerraformingManufactoryRecipes>
-    </GameData>
-    ```
+
+```xml
+<GameData>
+  <CentrifugeRecipes><!-- <RecipeData> --></CentrifugeRecipes>
+  <FurnaceRecipes><!-- <RecipeData> --></FurnaceRecipes>
+  <AdvancedFurnaceRecipes><!-- <RecipeData> --></AdvancedFurnaceRecipes>
+  <ArcFurnaceRecipes><!-- <RecipeData> --></ArcFurnaceRecipes>
+  <MicrowaveRecipes><!-- <RecipeData> --></MicrowaveRecipes>
+  <PackagingMachineRecipes><!-- <RecipeData> --></PackagingMachineRecipes>
+  <AutolatheRecipes><!-- <RecipeData> --></AutolatheRecipes>
+  <AutomatedOvenRecipes><!-- <RecipeData> --></AutomatedOvenRecipes>
+  <ElectronicsPrinterRecipes><!-- <RecipeData> --></ElectronicsPrinterRecipes>
+  <SecurityPrinterRecipes><!-- <RecipeData> --></SecurityPrinterRecipes>
+  <RocketManufactoryRecipes><!-- <RecipeData> --></RocketManufactoryRecipes>
+  <HydraulicPipeBenderRecipes><!-- <RecipeData> --></HydraulicPipeBenderRecipes>
+  <ToolManufactoryRecipes><!-- <RecipeData> --></ToolManufactoryRecipes>
+  <ChemistryRecipes><!-- <RecipeData> --></ChemistryRecipes>
+  <IngotRecipes><!-- <RecipeData> --></IngotRecipes>
+  <RecycleRecipes><!-- <RecipeData> --></RecycleRecipes>
+  <TerraformingManufactoryRecipes><!-- <RecipeData> --></TerraformingManufactoryRecipes>
+</GameData>
+```

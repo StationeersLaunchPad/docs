@@ -14,7 +14,7 @@ In a mod, these files can be anywhere inside the `GameData` folder except in a f
 ## Recipes
 Most devices that consume and produce items (printers, furnaces, centrifuge, etc), follow recipes defined in xml. These recipes can be replaced by mods by defining a recipe for the same item.
 
-Children: [RecipeData](GameData_Elements/recipedata.md)
+Children: [RecipeData](gamedata/recipedata.md)
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>

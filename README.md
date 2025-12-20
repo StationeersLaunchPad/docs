@@ -6,7 +6,7 @@ https://stationeerslaunchpad.github.io/docs
 
 Install `mkdocs`
 ```
-pip install mkdocs mkdocs-material
+pip install -r requirements.txt
 ```
 
 Run server

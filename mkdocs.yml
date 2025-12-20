@@ -18,6 +18,7 @@ theme:
 
 plugins:
   - search
+  - awesome-nav
 
 markdown_extensions:
   - admonition

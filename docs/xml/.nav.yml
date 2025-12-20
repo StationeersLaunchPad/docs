@@ -1,0 +1,5 @@
+append_unmatched: true
+nav:
+  - gamedata.md
+  - GameData Elements: gamedata/
+  - language.md

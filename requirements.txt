@@ -1,3 +1,4 @@
 mkdocs
 mkdocs-material
 click==8.2.1 # newer versions seem to have broken file watching
+mkdocs-awesome-nav

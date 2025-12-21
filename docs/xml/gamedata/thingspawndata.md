@@ -308,9 +308,9 @@ Includes all [`ThingSpawnData` Child Elements](#thingspawndata-children)
     :   If `Rule` is `None` or `Explicit`, the rotation in degrees of the spawned thing
 
 #### Conditions
-`<Species>` `SpeciesCondition`
-`<Difficulty>` `DifficultyCondition`
-:   Conditions that must match for this thing to be spawned. See [ConditionData (TODO)](#)
+[`<Species>` `SpeciesCondition`](conditiondata.md#speciescondition)
+[`<Difficulty>` `DifficultyCondition`](conditiondata.md#difficultycondition)
+:   Conditions that must match for this thing to be spawned
 
     !!! note
         Currently the `<Species>` condition can never match as the player is not used as the target to match against.

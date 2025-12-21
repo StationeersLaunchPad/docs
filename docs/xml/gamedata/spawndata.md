@@ -117,9 +117,9 @@ When not valid, this is instead a reference spawn and the `Id` attribute is used
 :   Name of this `SpawnData`. Currently only used as the display name in the creative spawn menu. May be specified by a localization `Key` or a fixed `Value`
 
 #### Conditions
-`<Species>` `SpeciesCondition`
-`<Difficulty>` `DifficultyCondition`
-:   Condition elements that restrict when this spawn will occur. See [ConditionData (TODO)](#)
+[`<Species>` `SpeciesCondition`](conditiondata.md#speciescondition)
+[`<Difficulty>` `DifficultyCondition`](conditiondata.md#difficultycondition)
+:   Condition elements that restrict when this spawn will occur
 
 #### Survival Property
 [`<SurvivalProperty>` `SurvivalPropertyAction`](actiondata.md#survivalpropertyaction)

@@ -113,8 +113,8 @@ When not valid, this is instead a reference spawn and the `Id` attribute is used
 ### Child Elements
 
 #### Name
-`<Name Key="NameKey">` `LocalizedStringReference`
-:   Localization key for the name of this `SpawnData`. Currently only used as the display name in the creative spawn menu
+`<Name Key="string" Value="string" />` `LocalizedStringReference`
+:   Name of this `SpawnData`. Currently only used as the display name in the creative spawn menu. May be specified by a localization `Key` or a fixed `Value`
 
 #### Conditions
 `<Species>` `SpeciesCondition`
@@ -122,21 +122,21 @@ When not valid, this is instead a reference spawn and the `Id` attribute is used
 :   Condition elements that restrict when this spawn will occur. See [ConditionData (TODO)](#)
 
 #### Survival Property
-`<SurvivalProperty>` `SurvivalPropertyAction`
-:   Sets a survival property (hydration, mood, etc) of the player or spawned entity. See [ActionData (TODO)](#)
+[`<SurvivalProperty>` `SurvivalPropertyAction`](actiondata.md#survivalpropertyaction)
+:   Sets a survival property (hydration, mood, etc) of the player or spawned entity
 
 #### Item Spawn
-`<Item>` `DynamicSpawnData`
-`<DynamicThing>` `DynamicSpawnData`
-:   Items to spawn as part of this `SpawnData`. See [DynamicSpawnData](thingspawndata.md#dynamicspawndata)
+[`<Item>` `DynamicSpawnData`](thingspawndata.md#dynamicspawndata)
+[`<DynamicThing>` `DynamicSpawnData`](thingspawndata.md#dynamicspawndata)
+:   Items to spawn as part of this `SpawnData`
 
 #### Structure Spawn
-`<Structure>` `StructureSpawnData`
-:   Structures to spawn as part of this `SpawnData`. Primarily used for prebuilt structures in tutorials. See [StructureSpawnData](thingspawndata.md#structurespawndata)
+[`<Structure>` `StructureSpawnData`](thingspawndata.md#structurespawndata)
+:   Structures to spawn as part of this `SpawnData`. Primarily used for prebuilt structures in tutorials
 
 #### Atmosphere
 `<WorldAtmosphere>` `WorldAtmosphereSpawnData`
-:   Atmospheres to spawn as part of this `SpawnData`. Primarily used to fill rooms with specific gasses in tutorials.
+:   Atmospheres to spawn as part of this `SpawnData`. Primarily used to fill rooms with specific gasses in tutorials
 
     ??? example "Structure"
         ```xml
@@ -151,8 +151,8 @@ When not valid, this is instead a reference spawn and the `Id` attribute is used
     `RoomId`
     :   Id of prebuilt `Room` this atmosphere is a member of
 
-    `<Gas>` `GasAction` (repeated)
-    :   A gas to spawn in this atmosphere. See [ActionData (TODO)](#)
+    [`<Gas>` `GasAction`](actiondata.md#gasaction) (repeated)
+    :   A gas to spawn in this atmosphere
 
 #### Child Spawns
 `<Spawn>` `SpawnData`

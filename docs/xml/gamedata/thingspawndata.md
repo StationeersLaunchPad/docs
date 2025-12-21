@@ -257,8 +257,8 @@ Includes all [`ThingSpawnData` Child Elements](#thingspawndata-children)
 ### Child Elements { #thingspawndata-children }
 
 #### Custom Name
-`<Name Key="string">` `LocalizedStringReference`
-:   Localization key for the custom name of the spawned thing
+`<Name Key="string" Value="string">` `LocalizedStringReference`
+:   Custom name of the spawned thing. Can be specified by localization `Key` or a fixed `Value`
 
 #### Custom Color
 `<Color Id="string" />` `ColorSwatchReference`
@@ -316,24 +316,24 @@ Includes all [`ThingSpawnData` Child Elements](#thingspawndata-children)
         Currently the `<Species>` condition can never match as the player is not used as the target to match against.
 
 #### Actions
-`<Logic>` `LogicValueAction`
-`<BuildState>` `BuildStateAction`
-`<Interaction>` `InteractionAction`
-`<MovePlayer>` `MovePlayerAction`
-`<Gene>` `GeneAction`
-`<Quantity>` `QuantityAction`
-`<Percent>` `PercentAction`
-`<Reagents>` `ReagentAction`
-`<Charge>` `ChargeAction`
-`<Gas>` `GasAction`
-`<SourceCode>` `SourceCodeAction`
-:   Actions to apply to the created thing. See [ActionData (TODO)](#)
+[`<Logic>` `LogicValueAction`](actiondata.md#logicvalueaction)
+[`<BuildState>` `BuildStateAction`](actiondata.md#buildstateaction)
+[`<Interaction>` `InteractionAction`](actiondata.md#interactionaction)
+[`<MovePlayer>` `MovePlayerAction`](actiondata.md#moveplayeraction)
+[`<Gene>` `GeneAction`](actiondata.md#geneaction)
+[`<Quantity>` `QuantityAction`](actiondata.md#quantityaction)
+[`<Percent>` `PercentAction`](actiondata.md#percentaction)
+[`<Reagents>` `ReagentAction`](actiondata.md#reagentaction)
+[`<Charge>` `ChargeAction`](actiondata.md#chargeaction)
+[`<Gas>` `GasAction`](actiondata.md#gasaction)
+[`<SourceCode>` `SourceCodeAction`](actiondata.md#sourcecodeaction)
+:   Actions to apply to the created thing.
 
 #### Child Items
-`<Item>` `DynamicSpawnData`
-`<DynamicThing>` `DynamicSpawnData`
+[`<Item>` `DynamicSpawnData`](#dynamicspawndata)
+[`<DynamicThing>` `DynamicSpawnData`](#dynamicspawndata)
 :   Child items to create in slots of the current created thing. If no slots are available, these will be spawned loose in the world.
 
 #### Child Spawns
-`<Spawn>` `SpawnData`
-:   Child `SpawnData` elements to spawn in slots of this thing. This allows you to use reference spawns to re-use child item spawn definitions. See [SpawnData](spawndata.md)
+[`<Spawn>` `SpawnData`](spawndata.md)
+:   Child `SpawnData` elements to spawn in slots of this thing. This allows you to use reference spawns to re-use child item spawn definitions.

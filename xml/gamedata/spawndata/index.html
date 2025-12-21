@@ -522,6 +522,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../actiondata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ActionData
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../recipedata/" class="md-nav__link">
         
   
@@ -1248,8 +1276,8 @@
 <h3 id="child-elements">Child Elements</h3>
 <h4 id="name">Name</h4>
 <dl>
-<dt><code>&lt;Name Key="NameKey"&gt;</code> <code>LocalizedStringReference</code></dt>
-<dd>Localization key for the name of this <code>SpawnData</code>. Currently only used as the display name in the creative spawn menu</dd>
+<dt><code>&lt;Name Key="string" Value="string" /&gt;</code> <code>LocalizedStringReference</code></dt>
+<dd>Name of this <code>SpawnData</code>. Currently only used as the display name in the creative spawn menu. May be specified by a localization <code>Key</code> or a fixed <code>Value</code></dd>
 </dl>
 <h4 id="conditions">Conditions</h4>
 <dl>
@@ -1259,25 +1287,25 @@
 </dl>
 <h4 id="survival-property">Survival Property</h4>
 <dl>
-<dt><code>&lt;SurvivalProperty&gt;</code> <code>SurvivalPropertyAction</code></dt>
-<dd>Sets a survival property (hydration, mood, etc) of the player or spawned entity. See <a href="#">ActionData (TODO)</a></dd>
+<dt><a href="../actiondata/#survivalpropertyaction"><code>&lt;SurvivalProperty&gt;</code> <code>SurvivalPropertyAction</code></a></dt>
+<dd>Sets a survival property (hydration, mood, etc) of the player or spawned entity</dd>
 </dl>
 <h4 id="item-spawn">Item Spawn</h4>
 <dl>
-<dt><code>&lt;Item&gt;</code> <code>DynamicSpawnData</code></dt>
-<dt><code>&lt;DynamicThing&gt;</code> <code>DynamicSpawnData</code></dt>
-<dd>Items to spawn as part of this <code>SpawnData</code>. See <a href="../thingspawndata/#dynamicspawndata">DynamicSpawnData</a></dd>
+<dt><a href="../thingspawndata/#dynamicspawndata"><code>&lt;Item&gt;</code> <code>DynamicSpawnData</code></a></dt>
+<dt><a href="../thingspawndata/#dynamicspawndata"><code>&lt;DynamicThing&gt;</code> <code>DynamicSpawnData</code></a></dt>
+<dd>Items to spawn as part of this <code>SpawnData</code></dd>
 </dl>
 <h4 id="structure-spawn">Structure Spawn</h4>
 <dl>
-<dt><code>&lt;Structure&gt;</code> <code>StructureSpawnData</code></dt>
-<dd>Structures to spawn as part of this <code>SpawnData</code>. Primarily used for prebuilt structures in tutorials. See <a href="../thingspawndata/#structurespawndata">StructureSpawnData</a></dd>
+<dt><a href="../thingspawndata/#structurespawndata"><code>&lt;Structure&gt;</code> <code>StructureSpawnData</code></a></dt>
+<dd>Structures to spawn as part of this <code>SpawnData</code>. Primarily used for prebuilt structures in tutorials</dd>
 </dl>
 <h4 id="atmosphere">Atmosphere</h4>
 <dl>
 <dt><code>&lt;WorldAtmosphere&gt;</code> <code>WorldAtmosphereSpawnData</code></dt>
 <dd>
-<p>Atmospheres to spawn as part of this <code>SpawnData</code>. Primarily used to fill rooms with specific gasses in tutorials.</p>
+<p>Atmospheres to spawn as part of this <code>SpawnData</code>. Primarily used to fill rooms with specific gasses in tutorials</p>
 <details class="example">
 <summary>Structure</summary>
 <div class="highlight"><pre><span></span><code><span class="nt">&lt;WorldAtmosphere</span><span class="w"> </span><span class="na">X=</span><span class="s">&quot;100&quot;</span><span class="w"> </span><span class="na">Y=</span><span class="s">&quot;200&quot;</span><span class="w"> </span><span class="na">Z=</span><span class="s">&quot;300&quot;</span><span class="w"> </span><span class="na">RoomId=</span><span class="s">&quot;1234&gt;</span>
@@ -1290,8 +1318,8 @@
 <dd>World grid coordinates of the atmosphere</dd>
 <dt><code>RoomId</code></dt>
 <dd>Id of prebuilt <code>Room</code> this atmosphere is a member of</dd>
-<dt><code>&lt;Gas&gt;</code> <code>GasAction</code> (repeated)</dt>
-<dd>A gas to spawn in this atmosphere. See <a href="#">ActionData (TODO)</a></dd>
+<dt><a href="../actiondata/#gasaction"><code>&lt;Gas&gt;</code> <code>GasAction</code></a> (repeated)</dt>
+<dd>A gas to spawn in this atmosphere</dd>
 </dl>
 </dd>
 </dl>

@@ -522,6 +522,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../actiondata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ActionData
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../recipedata/" class="md-nav__link">
         
   
@@ -1660,8 +1688,8 @@
 <h3 id="thingspawndata-children">Child Elements</h3>
 <h4 id="custom-name">Custom Name</h4>
 <dl>
-<dt><code>&lt;Name Key="string"&gt;</code> <code>LocalizedStringReference</code></dt>
-<dd>Localization key for the custom name of the spawned thing</dd>
+<dt><code>&lt;Name Key="string" Value="string"&gt;</code> <code>LocalizedStringReference</code></dt>
+<dd>Custom name of the spawned thing. Can be specified by localization <code>Key</code> or a fixed <code>Value</code></dd>
 </dl>
 <h4 id="custom-color">Custom Color</h4>
 <dl>
@@ -1731,29 +1759,29 @@
 </dl>
 <h4 id="actions">Actions</h4>
 <dl>
-<dt><code>&lt;Logic&gt;</code> <code>LogicValueAction</code></dt>
-<dt><code>&lt;BuildState&gt;</code> <code>BuildStateAction</code></dt>
-<dt><code>&lt;Interaction&gt;</code> <code>InteractionAction</code></dt>
-<dt><code>&lt;MovePlayer&gt;</code> <code>MovePlayerAction</code></dt>
-<dt><code>&lt;Gene&gt;</code> <code>GeneAction</code></dt>
-<dt><code>&lt;Quantity&gt;</code> <code>QuantityAction</code></dt>
-<dt><code>&lt;Percent&gt;</code> <code>PercentAction</code></dt>
-<dt><code>&lt;Reagents&gt;</code> <code>ReagentAction</code></dt>
-<dt><code>&lt;Charge&gt;</code> <code>ChargeAction</code></dt>
-<dt><code>&lt;Gas&gt;</code> <code>GasAction</code></dt>
-<dt><code>&lt;SourceCode&gt;</code> <code>SourceCodeAction</code></dt>
-<dd>Actions to apply to the created thing. See <a href="#">ActionData (TODO)</a></dd>
+<dt><a href="../actiondata/#logicvalueaction"><code>&lt;Logic&gt;</code> <code>LogicValueAction</code></a></dt>
+<dt><a href="../actiondata/#buildstateaction"><code>&lt;BuildState&gt;</code> <code>BuildStateAction</code></a></dt>
+<dt><a href="../actiondata/#interactionaction"><code>&lt;Interaction&gt;</code> <code>InteractionAction</code></a></dt>
+<dt><a href="../actiondata/#moveplayeraction"><code>&lt;MovePlayer&gt;</code> <code>MovePlayerAction</code></a></dt>
+<dt><a href="../actiondata/#geneaction"><code>&lt;Gene&gt;</code> <code>GeneAction</code></a></dt>
+<dt><a href="../actiondata/#quantityaction"><code>&lt;Quantity&gt;</code> <code>QuantityAction</code></a></dt>
+<dt><a href="../actiondata/#percentaction"><code>&lt;Percent&gt;</code> <code>PercentAction</code></a></dt>
+<dt><a href="../actiondata/#reagentaction"><code>&lt;Reagents&gt;</code> <code>ReagentAction</code></a></dt>
+<dt><a href="../actiondata/#chargeaction"><code>&lt;Charge&gt;</code> <code>ChargeAction</code></a></dt>
+<dt><a href="../actiondata/#gasaction"><code>&lt;Gas&gt;</code> <code>GasAction</code></a></dt>
+<dt><a href="../actiondata/#sourcecodeaction"><code>&lt;SourceCode&gt;</code> <code>SourceCodeAction</code></a></dt>
+<dd>Actions to apply to the created thing.</dd>
 </dl>
 <h4 id="child-items">Child Items</h4>
 <dl>
-<dt><code>&lt;Item&gt;</code> <code>DynamicSpawnData</code></dt>
-<dt><code>&lt;DynamicThing&gt;</code> <code>DynamicSpawnData</code></dt>
+<dt><a href="#dynamicspawndata"><code>&lt;Item&gt;</code> <code>DynamicSpawnData</code></a></dt>
+<dt><a href="#dynamicspawndata"><code>&lt;DynamicThing&gt;</code> <code>DynamicSpawnData</code></a></dt>
 <dd>Child items to create in slots of the current created thing. If no slots are available, these will be spawned loose in the world.</dd>
 </dl>
 <h4 id="child-spawns">Child Spawns</h4>
 <dl>
-<dt><code>&lt;Spawn&gt;</code> <code>SpawnData</code></dt>
-<dd>Child <code>SpawnData</code> elements to spawn in slots of this thing. This allows you to use reference spawns to re-use child item spawn definitions. See <a href="../spawndata/">SpawnData</a></dd>
+<dt><a href="../spawndata/"><code>&lt;Spawn&gt;</code> <code>SpawnData</code></a></dt>
+<dd>Child <code>SpawnData</code> elements to spawn in slots of this thing. This allows you to use reference spawns to re-use child item spawn definitions.</dd>
 </dl>
 
 

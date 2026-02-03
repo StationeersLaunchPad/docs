@@ -1,2 +1,7 @@
 append_unmatched: true
-nav: []
+nav:
+  - index.md
+  - Modding:
+    - structure.md
+    - codemod.md
+  - "*"

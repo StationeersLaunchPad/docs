@@ -15,11 +15,11 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
     
     
       
-        <title>slp Command in 0.3 - Stationeers Modding</title>
+        <title>slp Command in v0.3 - Stationeers Modding</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#slp-command-in-03" class="md-skip">
+        <a href="#slp-command-in-v03" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              slp Command in 0.3
+              slp Command in v0.3
             
           </span>
         </div>
@@ -1142,14 +1142,14 @@
 
 
 
-<h1 id="slp-command-in-03"><code>slp</code> Command in 0.3</h1>
+<h1 id="slp-command-in-v03"><code>slp</code> Command in v0.3</h1>
 <div class="admonition note">
 <p class="admonition-title">Work In Progress</p>
 <p>This documentation is a work in progress. Help out by submitting a pull request to the <a href="https://github.com/StationeersLaunchPad/docs">docs repository</a></p>
 </div>
 <p>In StationeersLaunchPad 0.3 (the repo hosted mods update), a number of additional commands have been added to interact with mod repos, as well as more general utility commands. <code>slp</code> commands will now wait for the game to be loaded to the required stage for the command, and will always be executed in order (async commands like installing repo mods will block future commands until the operation finishes).</p>
 <h2 id="commands">Commands</h2>
-<p>The following commands are in addition to the <a href="../commands/">existing commands</a> supported in 0.2</p>
+<p>The following commands are in addition to the <a href="../commands/">existing commands</a> supported in 0.2. When executing commands from the startup menu, omit the <code>slp</code> prefix.</p>
 <h3 id="modpkg"><code>modpkg</code></h3>
 <div class="highlight"><pre><span></span><code>slp modpkg [&lt;path.zip&gt;]
 </code></pre></div>
@@ -1169,38 +1169,57 @@ Generates a debug package zip file that collects various information useful for 
 <h3 id="repos"><code>repos</code></h3>
 <p>Contains commands for viewing and managing connected mod repos.</p>
 <h4 id="list"><code>list</code></h4>
-<div class="highlight"><pre><span></span><code>slp repos list [&lt;searchtext&gt;]
+<p><div class="highlight"><pre><span></span><code>slp repos list [&lt;searchtext&gt;]
 </code></pre></div>
+Lists connected mod repos, with an optional search filter</p>
 <h4 id="add"><code>add</code></h4>
-<div class="highlight"><pre><span></span><code>slp repos add &lt;RepoURL&gt; [novalidate]
+<p><div class="highlight"><pre><span></span><code>slp repos add &lt;RepoURL&gt; [novalidate]
 </code></pre></div>
+Adds a mod repo with the given http url of a <code>modrepo.xml</code> file. This makes mods in this mod repo available for installation. The optional <code>novalidate</code> argument will still add the repo even if the initial fetch of the <code>modrepo.xml</code> file fails.</p>
+<p>For mods hosted in a github repository, you can use the base repo url and it will automatically convert it to fetch the <code>modrepo.xml</code> from the <code>modrepo</code> branch</p>
+<details class="example">
+<summary>Example</summary>
+<div class="highlight"><pre><span></span><code>slp repos add github.com/RepoOwner/RepoName
+</code></pre></div>
+</details>
 <h4 id="remove"><code>remove</code></h4>
-<div class="highlight"><pre><span></span><code>slp repos remove &lt;RepoID|Index&gt;
+<p><div class="highlight"><pre><span></span><code>slp repos remove &lt;RepoID|Index&gt;
 </code></pre></div>
+Removes a connected mod repo by ID (url) or by index (shown in <code>slp repos list</code>). Any mods installed from this repo will no longer update to the latest available version.</p>
 <h4 id="update"><code>update</code></h4>
-<div class="highlight"><pre><span></span><code>slp repos update &lt;RepoID|Index&gt;
+<p><div class="highlight"><pre><span></span><code>slp repos update &lt;RepoID|Index&gt;
 </code></pre></div>
+Fetches an updated list of available mod versions from the repo specified by ID or index. When the <code>RepoCheckUpdates</code> configuration option is enabled (on by default), this will occur automatically on startup.</p>
 <h4 id="updateall"><code>updateall</code></h4>
-<div class="highlight"><pre><span></span><code>slp repos updateall
+<p><div class="highlight"><pre><span></span><code>slp repos updateall
 </code></pre></div>
+Fetches an updated list of available mod versions from all connected repos. When the <code>RepoCheckUpdates</code> configuration option is enabled (on by default), this will occur automatically on startup.</p>
 <h4 id="index"><code>index</code></h4>
-<div class="highlight"><pre><span></span><code>slp repos index [mod=&lt;ModID&gt;] [repo=&lt;RepoID&gt;] [branch=&lt;Branch&gt;] [version/minversion/maxversion=&lt;Version&gt;]
+<p><div class="highlight"><pre><span></span><code>slp repos index [mod=&lt;ModID&gt;] [repo=&lt;RepoID&gt;] [branch=&lt;Branch&gt;] [version/minversion/maxversion=&lt;Version&gt;]
 </code></pre></div>
+Lists available mod versions from connected repos. The optional arguments can be used to filter down the reuslts.</p>
 <h3 id="repomods"><code>repomods</code></h3>
 <p>Contains commands for viewing and managing installed repo mods</p>
 <h4 id="list_1"><code>list</code></h4>
-<div class="highlight"><pre><span></span><code>slp repomods list
+<p><div class="highlight"><pre><span></span><code>slp repomods list
 </code></pre></div>
+Lists mods that are currently installed from a mod repo</p>
 <h4 id="add_1"><code>add</code></h4>
-<div class="highlight"><pre><span></span><code>slp repomods add &lt;ModID&gt; [version=&lt;Version&gt;] [branch=&lt;Branch&gt;] [repo=&lt;RepoID&gt;]
+<p><div class="highlight"><pre><span></span><code>slp repomods add &lt;ModID&gt; [version=&lt;Version&gt;] [branch=&lt;Branch&gt;] [repo=&lt;RepoID&gt;]
 </code></pre></div>
+Installs a mod from connected repos by ModID. If not specified, <code>branch</code> will be the default (empty) branch, and version will be the latest available. If a mod is provided by multiple connected mod repos, you must specify the repo to install from.</p>
 <h4 id="remove_1"><code>remove</code></h4>
-<div class="highlight"><pre><span></span><code>slp repomods remove &lt;ModID|Index&gt; [version=&lt;Version&gt;] [branch=&lt;Branch&gt;] [repo=&lt;RepoID&gt;]
+<p><div class="highlight"><pre><span></span><code>slp repomods remove &lt;ModID|Index&gt; [version=&lt;Version&gt;] [branch=&lt;Branch&gt;] [repo=&lt;RepoID&gt;]
 </code></pre></div>
+Uninstalls a mod currently installed from a mod repo by ModID or index (show in <code>slp repomods list</code>). The optional parameters are used for disambiguation.</p>
 <h4 id="update_1"><code>update</code></h4>
-<div class="highlight"><pre><span></span><code>slp repomods update &lt;ModID|Index&gt; [version=&lt;Version&gt;] [branch=&lt;Branch&gt;] [repo=&lt;RepoID&gt;]
+<p><div class="highlight"><pre><span></span><code>slp repomods update &lt;ModID|Index&gt; [version=&lt;Version&gt;] [branch=&lt;Branch&gt;] [repo=&lt;RepoID&gt;]
 </code></pre></div>
+Updates a mod installed from a repo to the latest available version in that repo. The optional parameters are used for disambiguation.</p>
 <h4 id="updateall_1"><code>updateall</code></h4>
+<p><div class="highlight"><pre><span></span><code>slp repomods updateall
+</code></pre></div>
+Updates all mods installed from a repo to the latest available version. When the <code>RepoModCheckUpdates</code> configuration option is enabled (on by default), this will happen automatically on startup.</p>
 <h3 id="loadto"><code>loadto</code></h3>
 <div class="highlight"><pre><span></span><code>slp loadto (config|mods|gamedata)
 </code></pre></div>

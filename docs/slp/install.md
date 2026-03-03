@@ -19,4 +19,4 @@ TODO: Add screenshots
 ## Verify Installation
 If StationeersLaunchPad is installed correctly, you should see the LaunchPad window at the bottom of the loading screen
 
-<img width="640" height="360" alt="image" src="https://github.com/user-attachments/assets/a184a340-d461-4f99-bbe3-8699101fe15e" />
+![Verify Image](https://github.com/user-attachments/assets/a184a340-d461-4f99-bbe3-8699101fe15e){width=640 height=360}

@@ -1,0 +1,6 @@
+append_unmatched: true
+nav:
+  - install.md
+  - "*"
+ignore:
+  - commands_0.3.md

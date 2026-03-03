@@ -1,7 +1,7 @@
 append_unmatched: true
 nav:
   - index.md
-  - Modding:
-    - structure.md
-    - codemod.md
+  - StationeersLaunchPad: slp
+  - Modding: modding
+  - XML: xml
   - "*"

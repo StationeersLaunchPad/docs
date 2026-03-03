@@ -1,5 +1,7 @@
 # GameData Overview
 
+--8<-- "snippets/wip.md"
+
 GameData xml files contain configurations for the various systems of the game. You can find the vanilla GameData files in the game install under `rocketstation_Data/StreamingAssets/Data` and `rocketstation_Data/StreamingAssets/Worlds`. These files will always be loaded first, followed by the files in enabled mods.
 
 In a mod, these files can be anywhere inside the `GameData` folder except in a folder named `Language`. The name of the file doesn't matter as long as it has the xml extension. Each file should contain one top-level `GameData` element with any configuration elements inside.

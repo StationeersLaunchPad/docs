@@ -19,12 +19,17 @@ theme:
 plugins:
   - search
   - awesome-nav
+  - redirects:
+      redirect_maps:
+        'codemod.md': 'modding/codemod.md'
+        'structure.md': 'modding/structure.md'
 
 markdown_extensions:
   - admonition
   - def_list
   - attr_list
   - pymdownx.details
+  - pymdownx.snippets
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
@@ -34,3 +39,6 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/StationeersLaunchPad/docs
       name: Contribute
+
+watch:
+  - snippets

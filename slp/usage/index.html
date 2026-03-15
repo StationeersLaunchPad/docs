@@ -9,17 +9,21 @@
       
       
       
+        <link rel="prev" href="../install/">
+      
+      
+        <link rel="next" href="../commands/">
       
       
         
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
     
     
       
-        <title>Repo Hosted Mods - Stationeers Modding</title>
+        <title>Usage - Stationeers Modding</title>
       
     
     
@@ -70,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#repo-hosted-mods" class="md-skip">
+        <a href="#usage" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Repo Hosted Mods
+              Usage
             
           </span>
         </div>
@@ -252,18 +256,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -284,7 +290,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -318,6 +324,44 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Usage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
     </li>
   
 
@@ -420,6 +464,34 @@
     
   
     Writing a Code Mod
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modding/repomods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Repo Hosted Mods
   
 
     
@@ -903,75 +975,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Usage
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#developer-usage" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Developer Usage
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Developer Usage">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#packaging" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Packaging
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#github-hosting" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        GitHub hosting
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#custom-hosting" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Custom hosting
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -987,53 +990,20 @@
 
 
 
-<h1 id="repo-hosted-mods">Repo Hosted Mods</h1>
-<p>Starting in StationeersLaunchPad 0.3, mods can be installed and updated from an online repository instead of the steam workshop.</p>
-<p>For full details on how the feature works, see the <a href="https://github.com/StationeersLaunchPad/StationeersLaunchPad/issues/95">GitHub Hosted Mods Design</a>.</p>
+<h1 id="usage">Usage</h1>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Currently there is no UI in StationeersLaunchPad for interacting with repos and repo mods. Everything is managed via console commands. The UI will be built as the feature matures.</p>
+<p class="admonition-title">Work In Progress</p>
+<p>This documentation is a work in progress. Help out by submitting a pull request to the <a href="https://github.com/StationeersLaunchPad/docs">docs repository</a></p>
 </div>
-<h2 id="usage">Usage</h2>
-<p>Add a github repo to make its hosted mods available for install
-<div class="highlight"><pre><span></span><code>slp repos add github.com/&lt;user&gt;/&lt;repoName&gt;
-</code></pre></div>
-Or for a custom hosted repo, add the direct link to the modrepo.xml file
-<div class="highlight"><pre><span></span><code>slp repos add https://example.com/modrepo.xml
-</code></pre></div></p>
-<p>Show mod index to see available mods and versions
-<div class="highlight"><pre><span></span><code>slp repos index
-</code></pre></div></p>
-<p>Install a mod by ModID
-<div class="highlight"><pre><span></span><code>slp repomods add my.mod
-</code></pre></div></p>
-<p>For full info on the supported commands, see <a href="../commands_0.3/"><code>slp</code> Command in v0.3</a></p>
-<h2 id="developer-usage">Developer Usage</h2>
-<p>In order for a mod to be available in a mod repo, it <strong>must</strong> contain a <code>ModID</code> and <code>Version</code> in its <code>About.xml</code> file.</p>
-<h3 id="packaging">Packaging</h3>
-<p>A mod version hosted in a repo must be a zip file (one mod per zip file) with the mod files at the root (not nested in a folder). See <a href="../../modding/structure/">Mod Structure</a> for more info on mod files.
-<div class="highlight"><pre><span></span><code>MyMod.zip/
-  About/
-    About.xml
-</code></pre></div></p>
-<h3 id="github-hosting">GitHub hosting</h3>
-<p>When hosting in a GitHub repo, the default location for the <code>modrepo.xml</code> file is at the root on a branch named <code>modrepo</code>.</p>
-<p>To simplify the process of managing mod releases in a GitHub repo, use the <a href="https://github.com/StationeersLaunchPad/modrepo-builder-action">StationeersLaunchPad/modrepo-builder-action</a> GitHub action by <a href="https://github.com/aproposmath">aproposmath</a> to automatically build and update the <code>modrepo.xml</code> file when a GitHub release is made.</p>
-<h3 id="custom-hosting">Custom hosting</h3>
-<p>A mod repo can be hosted anywhere as long as the <code>modrepo.xml</code> and the mod version zip files are accessible via http. See the <a href="https://github.com/StationeersLaunchPad/StationeersLaunchPad/issues/95">GitHub Hosted Mods Design</a> for full details on how to structure the <code>modrepo.xml</code> file.</p>
-<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
-<span class="nt">&lt;ModRepo&gt;</span>
-<span class="w">  </span><span class="cm">&lt;!-- List all available versions of mods. Digest is optional --&gt;</span>
-<span class="w">  </span><span class="nt">&lt;ModVersion</span>
-<span class="w">    </span><span class="na">ModID=</span><span class="s">&quot;my.mod&quot;</span>
-<span class="w">    </span><span class="na">Version=</span><span class="s">&quot;0.1.2&quot;</span>
-<span class="w">    </span><span class="na">Name=</span><span class="s">&quot;My Mod&quot;</span>
-<span class="w">    </span><span class="na">Author=</span><span class="s">&quot;me&quot;</span>
-<span class="w">    </span><span class="na">Url=</span><span class="s">&quot;https://example.com/my.mod-0.1.2.zip&quot;</span>
-<span class="w">    </span><span class="na">Digest=</span><span class="s">&quot;sha256:0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef&quot;</span>
-<span class="w">  </span><span class="nt">/&gt;</span>
-<span class="nt">&lt;/ModRepo&gt;</span>
-</code></pre></div>
+<ul>
+<li>Subscribe to mods on the steam workshop, install mods locally in <code>Documents/my games/Stationeers/mods</code>, or install mods from repos using the <a href="../commands/#repos"><code>slp repos</code></a> and <a href="../commands/#repomods"><code>slp repomods</code></a> console commands.</li>
+<li>Go to the Settings page on the main menu to adjust StationeersLaunchPad settings</li>
+<li>Click the SLP loading box on the bottom at startup (or disable the <code>AutoLoad</code> setting) to enable/disable/reorder mods before loading.</li>
+<li>Report issues and get help in the <a href="https://discord.gg/stationeers">Stationeers Discord</a> #modding channel, or in the <a href="https://discord.gg/5qZbPVTw2U">Stationeers Modding Discord</a><ul>
+<li>Include a debug package generated with the <code>slp debugpkg</code> console command to aid in debugging</li>
+</ul>
+</li>
+</ul>
 
 
 

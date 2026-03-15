@@ -2,6 +2,18 @@
 
 --8<-- "snippets/wip.md"
 
+## Docs
+<div class="grid cards" markdown>
+
+- [Install StationeersLaunchPad](slp/install.md)
+- [StationeersLaunchPad Usage](slp/usage.md)
+- [Mod Creation](modding/structure.md)
+- [Mod XML Reference](xml/gamedata.md)
+- [Writing a Code Mod](modding/codemod.md)
+- [Distributing Mods](modding/repomods.md)
+
+</div>
+
 ## Links
 
 - Unity Mod Template: [github.com/StationeersModding/StationeersUnityModdingTemplate](https://github.com/StationeersModding/StationeersUnityModdingTemplate)

@@ -1,8 +1,7 @@
 append_unmatched: true
 nav:
   - install.md
+  - usage.md
   - "*"
 ignore:
-  - commands_0.3.md
   - update_error_0.2.25.md
-  - repomods.md

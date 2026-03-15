@@ -27,13 +27,13 @@ Install a mod by ModID
 slp repomods add my.mod
 ```
 
-For full info on the supported commands, see [`slp` Command in v0.3](commands_0.3.md)
+For full info on the supported commands, see [`slp` Command](../slp/commands.md)
 
 ## Developer Usage
 In order for a mod to be available in a mod repo, it **must** contain a `ModID` and `Version` in its `About.xml` file.
 
 ### Packaging
-A mod version hosted in a repo must be a zip file (one mod per zip file) with the mod files at the root (not nested in a folder). See [Mod Structure](../modding/structure.md) for more info on mod files.
+A mod version hosted in a repo must be a zip file (one mod per zip file) with the mod files at the root (not nested in a folder). See [Mod Structure](structure.md) for more info on mod files.
 ```
 MyMod.zip/
   About/

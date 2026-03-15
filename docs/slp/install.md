@@ -2,10 +2,12 @@
 
 --8<-- "snippets/wip.md"
 
-TODO: Add screenshots
+Ensure the game is not running before starting installation. If you encounter any issues, please ask for help in the [Stationeers Discord](https://discord.gg/stationeers) #modding channel, or in the [Stationeers Modding Discord](https://discord.gg/5qZbPVTw2U).
 
 ## Install BepInEx
 - [Download BepInEx 5.4](https://github.com/BepInEx/BepInEx/releases/download/v5.4.23.5/BepInEx_win_x64_5.4.23.5.zip) and extract into game folder (right click game in steam, `Manage->Browse local files`).
+??? info "Open Game Files"
+    ![Open Game Files](../img/open_stationeers_files.png)
 - should end up with `BepInEx` folder and `doorstop_config.ini` file in same folder as rocketstation.exe
 - run game once to create folder structure
 ??? info "Linux/Steam Deck"

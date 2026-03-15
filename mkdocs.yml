@@ -23,11 +23,13 @@ plugins:
       redirect_maps:
         'codemod.md': 'modding/codemod.md'
         'structure.md': 'modding/structure.md'
+        'slp/commands_0.3.md': 'slp/commands.md'
 
 markdown_extensions:
   - admonition
-  - def_list
   - attr_list
+  - def_list
+  - md_in_html
   - pymdownx.details
   - pymdownx.snippets
   - pymdownx.superfences
